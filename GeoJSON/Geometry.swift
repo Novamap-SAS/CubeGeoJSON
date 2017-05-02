@@ -296,7 +296,7 @@ open class Geometry: NSObject {
             
             if let geos = geometries {
                 
-                dict["geometries"] = geos.map({ return $0.dictionaryRepresentation })
+                dict["geometries"] = geos.map({ return $0.dictionaryRepresentation }) as AnyObject?
                 
             } else if let coords = coordinates {
                 
@@ -307,7 +307,7 @@ open class Geometry: NSObject {
                     }
                     
                 } else {
-                    dict["coordinates"] = coords.map({ return $0.dictionaryRepresentation })
+                    dict["coordinates"] = coords.map({ return $0.dictionaryRepresentation }) as AnyObject?
                 }
                 
             } else if let multiCoords = multiCoordinates {
