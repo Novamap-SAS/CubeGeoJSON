@@ -70,11 +70,11 @@ public enum GeometryType: String {
 }
 
 func DegreesToRadians (_ value:Double) -> Double {
-    return value * M_PI / 180.0
+    return value * .pi / 180.0
 }
 
 func RadiansToDegrees (_ value:Double) -> Double {
-    return value * 180.0 / M_PI
+    return value * 180.0 / .pi
 }
 
 /**
